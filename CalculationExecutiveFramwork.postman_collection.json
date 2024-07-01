@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "4e8be3db-1330-481e-bed5-95b2358a7a44",
+		"name": "CalculationExecutiveFramwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36209248"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/calculate/543",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate",
+						"543"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
