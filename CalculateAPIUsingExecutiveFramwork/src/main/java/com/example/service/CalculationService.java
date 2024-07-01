@@ -83,8 +83,8 @@ public class CalculationService {
             }
             boolean isArmstrong = original == sum;
             log.info("{} is Armstrong: {}", number, isArmstrong);
-        } catch (Exception e) {
-            log.error("Exception occurred while checking Armstrong number for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while checking Armstrong number for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -100,8 +100,8 @@ public class CalculationService {
             }
             boolean isPalindrome = original == reverse;
             log.info("{} is palindrome: {}", number, isPalindrome);
-        } catch (Exception e) {
-            log.error("Exception occurred while checking palindrome for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while checking palindrome for {}: {}", number, ex.getMessage());
         }
     }
 
