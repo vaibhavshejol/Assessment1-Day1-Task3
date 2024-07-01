@@ -66,7 +66,7 @@ public class CalculationService {
             }
             log.info("{} is prime: {}", number, isPrime);
         } catch (Exception ex) {
-            log.error("Exception occurred while checking primality for {}: {}", number, ex.getMessage());
+            log.error("Exception occurred while checking for prime number for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -132,7 +132,7 @@ public class CalculationService {
     }
 
     public void shutdownExecutor() {
-        
+
         executor.shutdown();
     }
     
