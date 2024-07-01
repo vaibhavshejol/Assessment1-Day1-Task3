@@ -25,7 +25,7 @@ public class CalculationController {
             log.info("Calculation tasks started for number: {}", number);
         } catch (Exception ex) {
             log.error("Exception occurred while performing calculations for number {}: {}", number, ex.getMessage());
-            return "Error occurred during calculations for number: " + number;
+            return "Error occurred during performing calculations for number: " + number;
         }
 
         return "Calculations completed for number: " + number;
