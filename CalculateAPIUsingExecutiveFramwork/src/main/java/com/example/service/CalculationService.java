@@ -28,8 +28,8 @@ public class CalculationService {
         try {
             int square = number * number;
             log.info("Square of {}: {}", number, square);
-        } catch (Exception e) {
-            log.error("Exception occurred while calculating square for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while calculating square for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -37,8 +37,8 @@ public class CalculationService {
         try {
             int cube = number * number * number;
             log.info("Cube of {}: {}", number, cube);
-        } catch (Exception e) {
-            log.error("Exception occurred while calculating cube for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while calculating cube for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -46,8 +46,8 @@ public class CalculationService {
         try {
             boolean isEven = number % 2 == 0;
             log.info("{} is even: {}", number, isEven);
-        } catch (Exception e) {
-            log.error("Exception occurred while checking evenness for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while checking evenness for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -65,8 +65,8 @@ public class CalculationService {
                 }
             }
             log.info("{} is prime: {}", number, isPrime);
-        } catch (Exception e) {
-            log.error("Exception occurred while checking primality for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while checking primality for {}: {}", number, ex.getMessage());
         }
     }
 
