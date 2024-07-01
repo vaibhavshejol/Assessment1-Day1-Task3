@@ -132,6 +132,7 @@ public class CalculationService {
     }
 
     public void shutdownExecutor() {
+        
         executor.shutdown();
     }
     
