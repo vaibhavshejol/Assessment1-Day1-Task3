@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "performCalculation",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -20,6 +20,24 @@
 					"path": [
 						"calculate",
 						"543"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shutdownExecutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/shutdown",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shutdown"
 					]
 				}
 			},
