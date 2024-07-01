@@ -2,35 +2,35 @@ package com.example.controller;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.qos.logback.classic.Logger;
+import com.example.service.CalculationService;
 
 @RestController
 public class CalculationController {
-    private static final Logger log = LoggerFactory.getLogger(CalculationController.class);
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(CalculationController.class);
 
     @Autowired
     private CalculationService calculationService;
 
-    @PostMapping("/calculate")
-    public String calculate(@RequestParam("number") int number) {
-        log.info("Received request to calculate for number: {}", number);
+    @PostMapping("/calculate/{number}")
+    public String calculate(@PathVariable ("number") int number) {
+        log.info("Request received to perform calculation on number: {}", number);
 
         try {
             calculationService.performCalculations(number);
-            log.info("Calculation tasks submitted for number: {}", number);
-        } catch (Exception e) {
-            log.error("Exception occurred while performing calculations for number {}: {}", number, e.getMessage());
+            log.info("Calculation tasks completed for number: {}", number);
+        } catch (Exception ex) {
+            log.error("Exception occurred while performing calculations for number {}: {}", number, ex.getMessage());
             return "Error occurred during calculations for number: " + number;
         }
 
-        return "Calculations initiated for number: " + number;
+        return "Calculations completed for number: " + number;
     }
 
-    // Optionally, you may include a shutdown endpoint to gracefully shutdown the executor
+    
     @PostMapping("/shutdown")
     public String shutdown() {
         calculationService.shutdownExecutor();
