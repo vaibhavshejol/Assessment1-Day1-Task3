@@ -29,7 +29,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your/repository.git
+git clone https://github.com/vaibhavshejol/Assessment1-Day1-Task3.git
 cd CalculateAPIUsingExecutiveFramwork
 Build the project using Maven:
 
@@ -56,7 +56,7 @@ Prime check
 Armstrong number check
 Palindrome check
 Factorial
-Reverse of a number
+Reverse of a number<br>
 Shutdown Endpoint
 POST /shutdown
 Initiates shutdown of the executor service.
