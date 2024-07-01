@@ -10,6 +10,7 @@ import com.example.service.CalculationService;
 
 @RestController
 public class CalculationController {
+
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(CalculationController.class);
 
     @Autowired
@@ -21,7 +22,7 @@ public class CalculationController {
 
         try {
             calculationService.performCalculations(number);
-            log.info("Calculation tasks completed for number: {}", number);
+            log.info("Calculation tasks started for number: {}", number);
         } catch (Exception ex) {
             log.error("Exception occurred while performing calculations for number {}: {}", number, ex.getMessage());
             return "Error occurred during calculations for number: " + number;
