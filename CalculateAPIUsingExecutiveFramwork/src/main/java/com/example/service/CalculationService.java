@@ -112,8 +112,8 @@ public class CalculationService {
                 factorial = factorial * i;
             }
             log.info("Factorial of {}: {}", number, factorial);
-        } catch (Exception e) {
-            log.error("Exception occurred while calculating factorial for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while calculating factorial for {}: {}", number, ex.getMessage());
         }
     }
 
@@ -126,8 +126,8 @@ public class CalculationService {
                 temp /= 10;
             }
             log.info("Reverse of {}: {}", number, reverse);
-        } catch (Exception e) {
-            log.error("Exception occurred while calculating reverse for {}: {}", number, e.getMessage());
+        } catch (Exception ex) {
+            log.error("Exception occurred while calculating reverse for {}: {}", number, ex.getMessage());
         }
     }
 
