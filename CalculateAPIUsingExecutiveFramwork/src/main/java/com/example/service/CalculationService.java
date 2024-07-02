@@ -7,12 +7,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+//Service class to perform various calculations asynchronously.
 @Service
 public class CalculationService {
 
     private static final Logger log = LoggerFactory.getLogger(CalculationService.class);
     private final ExecutorService executor = Executors.newFixedThreadPool(8);
 
+    //Initiates asynchronous calculations for a given number.
+    //Submits tasks to the executor
     public void performCalculations(int number) {
         executor.submit(() -> calculateSquare(number));
         executor.submit(() -> calculateCube(number));
@@ -24,6 +27,7 @@ public class CalculationService {
         executor.submit(() -> calculateReverse(number));
     }
 
+    //Calculate square
     private void calculateSquare(int number) {
         try {
             int square = number * number;
@@ -33,6 +37,7 @@ public class CalculationService {
         }
     }
 
+    //Calculate cube
     private void calculateCube(int number) {
         try {
             int cube = number * number * number;
@@ -42,6 +47,7 @@ public class CalculationService {
         }
     }
 
+    //Check even odd
     private void checkEven(int number) {
         try {
             boolean isEven = number % 2 == 0;
@@ -51,6 +57,7 @@ public class CalculationService {
         }
     }
 
+    //Check for prime
     private void checkPrime(int number) {
         try {
             boolean isPrime = true;
@@ -70,6 +77,7 @@ public class CalculationService {
         }
     }
 
+    //Check for Armstrong
     private void checkArmstrong(int number) {
         try {
             int original = number;
@@ -88,6 +96,7 @@ public class CalculationService {
         }
     }
 
+    //Check for palindrome
     private void checkPalindrome(int number) {
         try {
             int original = number;
@@ -105,6 +114,7 @@ public class CalculationService {
         }
     }
 
+    //Calculate factorial
     private void calculateFactorial(int number) {
         try {
             int factorial = 1;
@@ -117,6 +127,7 @@ public class CalculationService {
         }
     }
 
+    //Reversing number
     private void calculateReverse(int number) {
         try {
             int reverse = 0;
@@ -131,6 +142,7 @@ public class CalculationService {
         }
     }
 
+    //for shutdown executor
     public void shutdownExecutor() {
 
         executor.shutdown();
